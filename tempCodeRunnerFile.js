@@ -1,0 +1,5 @@
+myArr.push(7)
+myArr.push(8)
+myArr.pop()
+myArr.unshift(9)
+myArr.shift()
