@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | my family and me story</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>papa</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+       const li = document.createElement("li");
+        li.innerHTML = `${langName}`
+        document.querySelector(".language").
+        appendChild(li)
+    } 
+    addLanguage("mummy")
+    addLanguage("brother")
+    addLanguage("sister")
+
+    function addOptilanguage(langName){
+       const li =  document.createElement("li");
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector(".language").appendChild(li)
+    }
+    addOptilanguage("grandpa")
+
+    //edit
+     const secondLang = document.querySelector("li:nth-child(2)")
+    console.log(secondLang);
+    // secondLang.innerHTML = "mom"
+    const newLi = document.createElement("li")
+    newLi.textContent = "mother"
+    secondLang.replaceWith(newLi)
+
+    // edit 
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = "<li>father</li>"
+
+    //remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
